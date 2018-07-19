@@ -1,0 +1,2 @@
+# pyqt_login_qss_demo
+PyQt4登录界面及QSS应用简单demo，实际上为一个阿里云白名单添加工具
