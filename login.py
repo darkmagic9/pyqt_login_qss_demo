@@ -10,7 +10,7 @@ from PyQt4.QtGui import (
     QDialog,
     QMessageBox
 )
-from PyQt4.QtCore import Qt
+from PyQt4.QtCore import Qt, SIGNAL, SLOT
 from PyQt4.QtGui import QApplication
 class Login(QDialog):
     def __init__(self):
@@ -69,6 +69,8 @@ class Login(QDialog):
         # conexiones
         self.button_close.clicked.connect(self.close)
         self.button_login.clicked.connect(self.handleLogin)
+        # 初始化焦点位于哪个控件上
+        self.button_login.setFocus()   #获取焦点
     def handleLogin(self):
         # self.accept()  # 关键
         if (self.line_username.text() == 'admin' and self.line_password.text() == '123456'):
@@ -85,6 +87,10 @@ class Login(QDialog):
         x_w = self.offset.x()
         y_w = self.offset.y()
         self.move(x - x_w, y - y_w)
+    #重新定义回车键
+    def keyPressEvent(self, event):
+        if (event.key() == Qt.Key_Return):
+            self.handleLogin()
 
 if __name__ == "__main__":
     import sys
