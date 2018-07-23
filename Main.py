@@ -26,7 +26,7 @@ from aliyunsdkrds.request.v20140815 import ModifySecurityIpsRequest
 class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
-        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setWindowFlags(Qt.FramelessWindowHint|Qt.WindowMinimizeButtonHint)
         self.setWindowTitle(u"鱿鱼")
         self.setFixedSize(800, 600)
         self.setObjectName('principal')
