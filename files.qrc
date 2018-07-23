@@ -1,6 +1,7 @@
 <RCC>
- <qresource prefix="/" >
-	<file>4400.png</file>
-	<file>main.css</file>
-	</qresource>
+    <qresource prefix="/" >
+        <file>4400.png</file>
+        <file>main.css</file>
+        <file>qt.ico</file>
+    </qresource>
 </RCC>
