@@ -15,7 +15,7 @@ from PyQt4.QtGui import QApplication
 class Login(QDialog):
     def __init__(self):
         super(Login, self).__init__()
-        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setWindowFlags(Qt.FramelessWindowHint|Qt.WindowMinimizeButtonHint)
         self.setWindowTitle(u"鱿鱼")
         self.setFixedSize(300, 400)
         # self.setMaximumSize(300, 400)
