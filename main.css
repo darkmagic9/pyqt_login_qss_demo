@@ -87,6 +87,12 @@ QGroupBox{
 	color: #737373;
 	font-family: "Times New Roman", Times, serif;
 	text-transform: uppercase;
+	margin-top: 5px;
+}
+QGroupBox::title{
+        font-family: Microsoft YaHei;
+        top: -5px;
+        left: 10px;
 }
 #label_outip{
 	font-size: 18px;
