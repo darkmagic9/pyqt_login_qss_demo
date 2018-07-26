@@ -1,0 +1,151 @@
+/* main.css estilos en pyqt4 */
+
+#principal{
+	background: #F0F8FF;
+}
+
+#button_login{
+	border: none;
+	border-radius: 20px;
+	background: #1874CD;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+
+#button_login:hover{
+	background: #6CA6CD;
+	color: #FFF;
+}
+
+#line_username,
+#line_password{
+	border: none;
+	background: transparent;
+	border-bottom: 2px solid #404040;
+	color: #080808;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+#line_username:focus,
+#line_password:focus{
+	border-bottom: 2px solid #1ED760;
+}
+
+#button_close{
+	background: transparent;
+	color: #D6D6D7;
+	font-size: 16px;
+	border: none;
+}
+
+#button_close:hover{
+	background: #E81123;
+	color: #FFF;
+}
+
+#button_min{
+	background: transparent;
+	color: #FFF;
+	font-size: 18px;
+	border: none;
+}
+
+#button_min:hover{
+	background: #1874CD;
+	color: #FFFFFF;
+}
+
+#frame_window{
+	background: #051B3D;
+}
+
+#title_frame{
+	font-size: 22px;
+	color: #C6E2FF;
+}
+
+QCheckBox{
+	color: #0A0A0A;
+	font-size: 17px;
+	font-family: "Times New Roman";
+}
+QCheckBox:hover{
+	color: #191970;
+}
+QCheckBox:checked{
+	color: #008B00;
+}
+
+QGroupBox{
+	border:2px solid #1C1C1C;
+	border-radius:5px;
+	font-size: 15px;
+	color: #737373;
+	font-family: "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+QGroupBox::title{
+        font-family: Microsoft YaHei;
+        top: -5px;
+        left: 10px;
+}
+#label_outip{
+	font-size: 18px;
+	color: #191970;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+}
+#button_getip{
+	/*text-transform: uppercase;*/
+	border: none;
+	border-radius: 10px;
+	background: #1874CD;
+	color: #FFFFFF;
+	/*font-weight: bold;*/
+	/*font-size: 20px;*/
+	font-family: "Times New Roman", Times, serif;
+}
+#button_getip:hover{
+	background: #27408B;
+	color: #FFF;
+}
+#button_getip:disabled{
+	background: #858585;
+	color: #F8F8FF;
+}
+
+#button_setup{
+	/*text-transform: uppercase;*/
+	border: none;
+	border-radius: 10px;
+	background: #00CD00;
+	color: #CD5C5C;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: "Times New Roman", Times, serif;
+	vertical-align: middle;
+	text-align:center;
+
+}
+#button_setup:hover{
+	background: #006400;
+	color: #FFF;
+}
+#button_setup:disabled{
+	background: #858585;
+	color: #F8F8FF;
+}
+
+QMessageBox QLabel{
+	color:red;
+
+}
+
+#browser_text{
+	background-image: url(":/4400.png");
+}
