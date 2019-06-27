@@ -7,10 +7,10 @@ from PyQt5.QtCore import Qt, pyqtSignal, pyqtSlot
 class Login(QDialog):
     def __init__(self):
         super(Login, self).__init__()
-        self.setWindowIcon(QIcon('qt.png'))
+        self.setWindowIcon(QIcon('qt.ico'))
         self.setWindowFlags(Qt.FramelessWindowHint|Qt.WindowMinimizeButtonHint)
 
-        self.setWindowTitle(u"鱿鱼")
+        self.setWindowTitle(u"Mod")
         self.setFixedSize(300, 400)
         self.setObjectName('principal')
         self.createGUI()
@@ -22,8 +22,8 @@ class Login(QDialog):
         self.title_frame = QLabel(self.frame_window)
         self.title_frame.setGeometry(0, 0, 300, 40)
         self.title_frame.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-        self.title_frame.setFont(QFont("微软雅黑", 20, QFont.Bold))
-        self.title_frame.setText(u"鱿鱼白名单")
+        self.title_frame.setFont(QFont("Tahoma", 20, QFont.Bold))
+        self.title_frame.setText(u"Mod Login")
         self.title_frame.setObjectName('title_frame')
 
         self.container = QWidget(self)
@@ -39,15 +39,15 @@ class Login(QDialog):
 
         self.button_login = QPushButton(self.container)
         self.button_login.setGeometry(20, 300, 260, 40)
-        self.button_login.setText(u'登录')
+        self.button_login.setText(u'Login')
         self.button_login.setObjectName('button_login')
         self.button_login.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.line_username = QLineEdit(self.container)
         self.line_username.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        self.line_username.setFont(QFont("微软雅黑", 20, QFont.Bold))
+        self.line_username.setFont(QFont("Tahoma", 20, QFont.Bold))
         self.line_username.setGeometry(20, 180, 260, 40)
-        self.line_username.setPlaceholderText(u'用户名')
+        self.line_username.setPlaceholderText(u'Username')
         self.line_username.setObjectName('line_username')
         self.ac_username = QAction()
         self.ac_username.setIcon(QIcon('username.png'))
@@ -55,15 +55,15 @@ class Login(QDialog):
 
         self.line_password = QLineEdit(self.container)
         self.line_password.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        self.line_password.setFont(QFont("微软雅黑", 20, QFont.Bold))
+        self.line_password.setFont(QFont("Tahoma", 20, QFont.Bold))
         self.line_password.setGeometry(20, 230, 260, 40)
         self.line_password.setEchoMode(QLineEdit.Password)
-        self.line_password.setPlaceholderText(u'密码')
+        self.line_password.setPlaceholderText(u'Password')
         self.line_password.setObjectName('line_password')
         self.ac1_password = QAction()
         self.ac1_password.setIcon(QIcon('password.png'))
         self.ac2_password = QAction()
-        self.ac2_password.setToolTip('显示密码')
+        self.ac2_password.setToolTip('Show Password')
         self.ac2_password.setIcon(QIcon('show_pw.png'))
         self.line_password.addAction(self.ac1_password, QLineEdit.LeadingPosition)
         self.line_password.addAction(self.ac2_password, QLineEdit.TrailingPosition)
@@ -77,10 +77,15 @@ class Login(QDialog):
     def handleLogin(self):
         # self.accept()  # 关键
         if (self.line_username.text() == 'admin' and self.line_password.text() == '123456'):
-            self.accept()  # 关键
+            
+            self.appmain = MainWindow()
+            # self.accept()  # 关键
+            self.hide()
+            self.appmain.show()
+
         else:
             QMessageBox.warning(
-                self, u'提示', u'用户或密码错误',QMessageBox.Ok)
+                self, u'Prompt', u'User or Password Error',QMessageBox.Ok)
     def mousePressEvent(self, event):
         self.offset = event.pos()
 

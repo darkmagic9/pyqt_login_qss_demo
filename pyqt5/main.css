@@ -106,8 +106,8 @@ QGroupBox::title{
 	border-radius: 10px;
 	background: #1874CD;
 	color: #FFFFFF;
-	/*font-weight: bold;*/
-	/*font-size: 20px;*/
+	font-weight: bold;
+	font-size: 20px;
 	font-family: "Times New Roman", Times, serif;
 }
 #button_getip:hover{
@@ -126,7 +126,7 @@ QGroupBox::title{
 	background: #00CD00;
 	color: #CD5C5C;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 20px;
 	font-family: "Times New Roman", Times, serif;
 	vertical-align: middle;
 	text-align:center;
